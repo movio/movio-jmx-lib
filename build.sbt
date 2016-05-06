@@ -1,6 +1,5 @@
 organization := "movio.cinema"
 name := "mc-jmx-lib"
-version := "0.2.0-SNAPSHOT"
 
 scalaVersion := "2.11.6"
 
@@ -9,3 +8,5 @@ libraryDependencies ++= Seq(
   "org.mockito" % "mockito-core" % "1.9.5" % Test
 )
 
+releaseVersionBump := sbtrelease.Version.Bump.Minor
+releaseTagName := s"${version.value}"
